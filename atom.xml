@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Brady&#39;s Notes</title>
+  
+  <subtitle>Quick notes</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://brady2037.github.io/"/>
+  <updated>2017-12-21T09:32:06.776Z</updated>
+  <id>https://brady2037.github.io/</id>
+  
+  <author>
+    <name>Brady2037</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于 Git 提交错误10053</title>
+    <link href="https://brady2037.github.io/2017/12/21/%E5%85%B3%E4%BA%8E-Git-%E6%8F%90%E4%BA%A4%E9%94%99%E8%AF%AF10053/"/>
+    <id>https://brady2037.github.io/2017/12/21/关于-Git-提交错误10053/</id>
+    <published>2017-12-21T09:25:07.000Z</published>
+    <updated>2017-12-21T09:32:06.776Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Git提交推送时报错"><a href="#Git提交推送时报错" class="headerlink" title="Git提交推送时报错"></a>Git提交推送时报错</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Push failed</span><br><span class="line">Failed with error: The remote end hung up unexpectedly</span><br><span class="line">The remote end hung up unexpectedly</span><br><span class="line">unable to rewind rpc post data - try increasing http.postBuffer</span><br><span class="line">RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10053</span><br></pre></td></tr></table></figure><p>原因是Git默认限制推送的大小，运行命令更改限制大小即可</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.postBuffer 524288000</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Git提交推送时报错&quot;&gt;&lt;a href=&quot;#Git提交推送时报错&quot; class=&quot;headerlink&quot; title=&quot;Git提交推送时报错&quot;&gt;&lt;/a&gt;Git提交推送时报错&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;t
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="其他" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/%E5%85%B6%E4%BB%96/"/>
+    
+      <category term="问题解决" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/%E5%85%B6%E4%BB%96/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+    
+      <category term="git" scheme="https://brady2037.github.io/tags/git/"/>
+    
+      <category term="问题解决" scheme="https://brady2037.github.io/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cmder win10下报错 Can&#39;t register shortcut</title>
+    <link href="https://brady2037.github.io/2017/12/06/win10%E4%B8%8B-Can-t-register-shortcut/"/>
+    <id>https://brady2037.github.io/2017/12/06/win10下-Can-t-register-shortcut/</id>
+    <published>2017-12-06T03:05:50.000Z</published>
+    <updated>2017-12-18T14:51:55.815Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>搬运自-Github：<a href="https://www.noisyfox.io/android-captive-portal.html" target="_blank" rel="noopener">Can’t register shortcut</a></p></blockquote><p><img src="https://cloud.githubusercontent.com/assets/15866600/11176103/ed471ab8-8c39-11e5-9262-125a52ca4943.PNG" alt=""></p><p>冲突的原因是无法设置 Ctrl + ` 热键</p><p><code>Win + Alt + P</code> 打开设置,在 <code>Keys &amp; Macro</code> 树状菜单下Hotkey一栏下找到 Ctrl + `<br>Description为Minimize/Restore(Quake-style hotkey also)，选中后在下方Choose hotkey中增加alt键位,点击右下角 Save settings 即可</p><a id="more"></a><p><img src="http://oph0392na.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20171206132956.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;搬运自-Github：&lt;a href=&quot;https://www.noisyfox.io/android-captive-portal.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Can’t register shortcut&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/15866600/11176103/ed471ab8-8c39-11e5-9262-125a52ca4943.PNG&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;冲突的原因是无法设置 Ctrl + ` 热键&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Win + Alt + P&lt;/code&gt; 打开设置,在 &lt;code&gt;Keys &amp;amp; Macro&lt;/code&gt; 树状菜单下Hotkey一栏下找到 Ctrl + `&lt;br&gt;Description为Minimize/Restore(Quake-style hotkey also)，选中后在下方Choose hotkey中增加alt键位,点击右下角 Save settings 即可&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="windows" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/windows/"/>
+    
+      <category term="软件" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/windows/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="问题解决" scheme="https://brady2037.github.io/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+      <category term="windows" scheme="https://brady2037.github.io/tags/windows/"/>
+    
+      <category term="Cmder" scheme="https://brady2037.github.io/tags/Cmder/"/>
+    
+      <category term="软件" scheme="https://brady2037.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于报错 transformClassesWithProfilers-transformFor</title>
+    <link href="https://brady2037.github.io/2017/11/15/%E5%85%B3%E4%BA%8EtransformClassesWithProfilers-transformFor/"/>
+    <id>https://brady2037.github.io/2017/11/15/关于transformClassesWithProfilers-transformFor/</id>
+    <published>2017-11-15T06:39:22.000Z</published>
+    <updated>2017-12-18T14:51:55.815Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="升级AndroidStudio3-0后-运行项目报错"><a href="#升级AndroidStudio3-0后-运行项目报错" class="headerlink" title="升级AndroidStudio3.0后,运行项目报错"></a>升级AndroidStudio3.0后,运行项目报错</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error:Execution failed for task &apos;:ygj_new:transformClassesWithProfilers-transformFor_360Debug&apos;. &gt; 3</span><br></pre></td></tr></table></figure><p>在<code>Edit configuration</code>中关闭<code>advanced profiling</code>即可</p><a id="more"></a><p><img src="http://oph0392na.bkt.clouddn.com/2017-11-15-WX20171115-144235@2x.png" alt="WX20171115-144235@2x"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;升级AndroidStudio3-0后-运行项目报错&quot;&gt;&lt;a href=&quot;#升级AndroidStudio3-0后-运行项目报错&quot; class=&quot;headerlink&quot; title=&quot;升级AndroidStudio3.0后,运行项目报错&quot;&gt;&lt;/a&gt;升级AndroidStudio3.0后,运行项目报错&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Error:Execution failed for task &amp;apos;:ygj_new:transformClassesWithProfilers-transformFor_360Debug&amp;apos;. &amp;gt; 3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在&lt;code&gt;Edit configuration&lt;/code&gt;中关闭&lt;code&gt;advanced profiling&lt;/code&gt;即可&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://brady2037.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="android" scheme="https://brady2037.github.io/tags/android/"/>
+    
+      <category term="android studio" scheme="https://brady2037.github.io/tags/android-studio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于小米5s刷 Resurrection Remix OS 部分应用没有声音 &amp; 刷机步骤</title>
+    <link href="https://brady2037.github.io/2017/11/11/%E5%B0%8F%E7%B1%B35s%E5%88%B7Resurrection-Remix-OS/"/>
+    <id>https://brady2037.github.io/2017/11/11/小米5s刷Resurrection-Remix-OS/</id>
+    <published>2017-11-11T12:58:24.000Z</published>
+    <updated>2017-12-18T14:51:55.815Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h4><p>刷成功后使用了半天,功能基本正常<br>之后发现微信/网易云音乐等应用没有声音,但是铃声/通知/游戏等应用是有声音的,在XDA论坛的一篇博文上找到了解决的方法,需要刷一个补丁包<br>补丁包页面:<br><a href="https://github.com/fjtrujy/capricornCNFirmware/releases" target="_blank" rel="noopener">capricornCNFirmware</a><br>点击download下的zip链接</p><a id="more"></a><p><img src="http://oph0392na.bkt.clouddn.com/2017-11-11-WX20171111-211736@2x.png" height="1430" width="784"></p><p>下载后重启进入<code>Recovery</code>,选择sdcard中的zip包刷入即可</p><p>这里附上刷机的步骤</p><h4 id="解锁BootLoader"><a href="#解锁BootLoader" class="headerlink" title="解锁BootLoader"></a>解锁BootLoader</h4><p>进入小米解锁网站 <a href="http://unlock.update.miui.com" target="_blank" rel="noopener">申请解锁小米手机</a><br>填写资料申请,通过后下载解锁软件,根据软件提示解锁手机<br><a href="http://www.miui.com/thread-6055459-1-1.html" target="_blank" rel="noopener">[教程] 小米手机5s 解锁（线刷必需）与上锁 详细小白教程</a></p><h4 id="需要下载的文件"><a href="#需要下载的文件" class="headerlink" title="需要下载的文件"></a>需要下载的文件</h4><p>卡刷需要第三方的Recovery<br>下载页面 <a href="https://dl.twrp.me/capricorn" target="_blank" rel="noopener">TWRP</a><br>选择带有<code>.img</code>的链接<br><img src="http://oph0392na.bkt.clouddn.com/2017-11-11-WX20171111-213756@2x.png" alt="WX20171111-213756@2x"></p><p>下载adb<br><a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="noopener">adb-Windows</a><br><a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" target="_blank" rel="noopener">adb-Mac</a></p><p>下载卡刷包<br><a href="https://sourceforge.net/projects/resurrectionremix/files/capricorn/Nougat/" target="_blank" rel="noopener">Resurrection Remix OS</a><br>选择列表中最新的一个即可</p><h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>解压缩下载的adb压缩包后,打开cmd命令行或Terminal终端,cd到解压缩后的目录</p><p>打开手机设置－关于手机－然后点击MIUI版本号7次，就打开的“开发者模式”，然后再返回“设置”，点击更多“设置”　就能找到“开发者选项”,进入后打开usb调试选项</p><p>之后连接手机到电脑,如手机出现权限弹框点击同意,之后命令行下输入<code>adb devices</code>,多试几次,出现如下样式表示连接成功<br><img src="http://oph0392na.bkt.clouddn.com/2017-11-11-WX20171111-220325@2x.png" alt="WX20171111-220325@2x"><br>命令行输入<code>adb reboot bootloader</code>然后回车,手机重启进入fastboot模式<br>命令行<code>fastboot devices</code>,显示已连接的手机代号<br><strong>macOS 10.13 下此命令不可用 提示<code>ERROR: Unable to create a plug-in (e00002be)</code> 建议使用Windows平台</strong><br>命令行<code>fastboot flash recovery 下载的TWRP文件名</code><br>类似<code>fastboot flash recovery twrp-x.x.x-x-capricorn.img</code></p><p>之后按住 音量上/加键+电源键,长按直到出现 <code>MI</code> logo后松手即进入</p><p>将下载的卡刷包传入手机<br>命令行<code>adb push filename.zip /sdcard/</code>,filename.zip替换为卡刷包的文件名<br>类似:<code>adb push RR-N-v5.8.5-20171011-capricorn-Weekly.zip /sdcard/</code></p><p>选择[清除]-[高级清除] ,勾选 [Cache] [System] [Data] 滑动确认</p><p>之后返回首页,选择[安装] 浏览目录选择下载的卡刷包 滑动输入即可,不要忘记刷入声音相关的补丁包</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;问题解决&quot;&gt;&lt;a href=&quot;#问题解决&quot; class=&quot;headerlink&quot; title=&quot;问题解决&quot;&gt;&lt;/a&gt;问题解决&lt;/h4&gt;&lt;p&gt;刷成功后使用了半天,功能基本正常&lt;br&gt;之后发现微信/网易云音乐等应用没有声音,但是铃声/通知/游戏等应用是有声音的,在XDA论坛的一篇博文上找到了解决的方法,需要刷一个补丁包&lt;br&gt;补丁包页面:&lt;br&gt;&lt;a href=&quot;https://github.com/fjtrujy/capricornCNFirmware/releases&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;capricornCNFirmware&lt;/a&gt;&lt;br&gt;点击download下的zip链接&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="安卓" scheme="https://brady2037.github.io/categories/%E5%AE%89%E5%8D%93/"/>
+    
+      <category term="rom" scheme="https://brady2037.github.io/categories/%E5%AE%89%E5%8D%93/rom/"/>
+    
+    
+      <category term="安卓" scheme="https://brady2037.github.io/tags/%E5%AE%89%E5%8D%93/"/>
+    
+      <category term="rom" scheme="https://brady2037.github.io/tags/rom/"/>
+    
+      <category term="Resurrection Remix OS" scheme="https://brady2037.github.io/tags/Resurrection-Remix-OS/"/>
+    
+      <category term="小米5s" scheme="https://brady2037.github.io/tags/%E5%B0%8F%E7%B1%B35s/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>切换ViewPager,RecyclerView自动滑动问题</title>
+    <link href="https://brady2037.github.io/2017/11/09/ViewPager-Fragment-RecyclerView-%E5%BD%93%E5%88%87%E6%8D%A2viewpager%E6%97%B6-recyclerview%E8%87%AA%E5%8A%A8%E6%BB%91%E5%8A%A8%E9%97%AE%E9%A2%98/"/>
+    <id>https://brady2037.github.io/2017/11/09/ViewPager-Fragment-RecyclerView-当切换viewpager时-recyclerview自动滑动问题/</id>
+    <published>2017-11-09T11:25:32.000Z</published>
+    <updated>2017-12-18T14:51:55.815Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="ViewPager-Fragment-RecyclerView-当切换ViewPager时-RecyclerView自动总是自动滑动"><a href="#ViewPager-Fragment-RecyclerView-当切换ViewPager时-RecyclerView自动总是自动滑动" class="headerlink" title="ViewPager+Fragment+RecyclerView,当切换ViewPager时,RecyclerView自动总是自动滑动"></a>ViewPager+Fragment+RecyclerView,当切换ViewPager时,RecyclerView自动总是自动滑动</h4><p>这个问题应该是ViewPager在切换时RecyclerView获得了焦点<br>RecyclerView的 <code>focusableOnTouchMode</code>属性默认是<code>true</code>，所以ViewPager切换时recyclerView自动获得焦点后就会发生滚动<br>解决办法是将recyclerView的父控件设置<code>android:focusableInTouchMode=&quot;true&quot;</code></p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;ViewPager-Fragment-RecyclerView-当切换ViewPager时-RecyclerView自动总是自动滑动&quot;&gt;&lt;a href=&quot;#ViewPager-Fragment-RecyclerView-当切换ViewPager时-RecyclerView自动总是自动滑动&quot; class=&quot;headerlink&quot; title=&quot;ViewPager+Fragment+RecyclerView,当切换ViewPager时,RecyclerView自动总是自动滑动&quot;&gt;&lt;/a&gt;ViewPager+Fragment+RecyclerView,当切换ViewPager时,RecyclerView自动总是自动滑动&lt;/h4&gt;&lt;p&gt;这个问题应该是ViewPager在切换时RecyclerView获得了焦点&lt;br&gt;RecyclerView的 &lt;code&gt;focusableOnTouchMode&lt;/code&gt;属性默认是&lt;code&gt;true&lt;/code&gt;，所以ViewPager切换时recyclerView自动获得焦点后就会发生滚动&lt;br&gt;解决办法是将recyclerView的父控件设置&lt;code&gt;android:focusableInTouchMode=&amp;quot;true&amp;quot;&lt;/code&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="android" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/android/"/>
+    
+      <category term="问题解决" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/android/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+    
+      <category term="fragment" scheme="https://brady2037.github.io/tags/fragment/"/>
+    
+      <category term="viewpager" scheme="https://brady2037.github.io/tags/viewpager/"/>
+    
+      <category term="recyclerview" scheme="https://brady2037.github.io/tags/recyclerview/"/>
+    
+      <category term="滑动" scheme="https://brady2037.github.io/tags/%E6%BB%91%E5%8A%A8/"/>
+    
+      <category term="问题" scheme="https://brady2037.github.io/tags/%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Android 7.1.2 网络图标上的感叹号</title>
+    <link href="https://brady2037.github.io/2017/11/09/%E5%85%B3%E4%BA%8EAndroid-7-1-2-%E7%BD%91%E7%BB%9C%E5%9B%BE%E6%A0%87%E4%B8%8A%E7%9A%84%E6%84%9F%E5%8F%B9%E5%8F%B7/"/>
+    <id>https://brady2037.github.io/2017/11/09/关于Android-7-1-2-网络图标上的感叹号/</id>
+    <published>2017-11-09T02:09:57.000Z</published>
+    <updated>2017-12-18T14:51:55.815Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>搬运自-狐狸的小小窝:<a href="https://www.noisyfox.io/android-captive-portal.html" target="_blank" rel="noopener">关于 ANDROID 5.0-7.1.2 网络图标上的感叹号及其解决办法</a></p></blockquote><h4 id="命令行下执行adb命令"><a href="#命令行下执行adb命令" class="headerlink" title="命令行下执行adb命令"></a>命令行下执行adb命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell &quot;settings put global captive_portal_https_url https://www.noisyfox.cn/generate_204&quot;</span><br></pre></td></tr></table></figure><p>恢复可用:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell &quot;settings delete global captive_portal_https_url&quot;</span><br></pre></td></tr></table></figure></p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;搬运自-狐狸的小小窝:&lt;a href=&quot;https://www.noisyfox.io/android-captive-portal.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;关于 ANDROID 5.0-7.1.2 网络图标上的感叹号及其解决办法&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;命令行下执行adb命令&quot;&gt;&lt;a href=&quot;#命令行下执行adb命令&quot; class=&quot;headerlink&quot; title=&quot;命令行下执行adb命令&quot;&gt;&lt;/a&gt;命令行下执行adb命令&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;adb shell &amp;quot;settings put global captive_portal_https_url https://www.noisyfox.cn/generate_204&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;恢复可用:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;adb shell &amp;quot;settings delete global captive_portal_https_url&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="安卓" scheme="https://brady2037.github.io/categories/%E5%AE%89%E5%8D%93/"/>
+    
+    
+      <category term="安卓" scheme="https://brady2037.github.io/tags/%E5%AE%89%E5%8D%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kotlin click事件 intent跳转 fragment获取控件</title>
+    <link href="https://brady2037.github.io/2017/11/06/kotlin-click%E4%BA%8B%E4%BB%B6-intent%E8%B7%B3%E8%BD%AC-fragment%E8%8E%B7%E5%8F%96%E6%8E%A7%E4%BB%B6/"/>
+    <id>https://brady2037.github.io/2017/11/06/kotlin-click事件-intent跳转-fragment获取控件/</id>
+    <published>2017-11-06T07:12:04.000Z</published>
+    <updated>2017-12-18T14:51:55.815Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>搬运自CSDN:<a href="http://blog.csdn.net/qqduxingzhe/article/details/76474813" target="_blank" rel="noopener"> kotlin click事件 intent跳转 fragment获取控件</a></p></blockquote><h4 id="click事件-intent跳转-传递参数"><a href="#click事件-intent跳转-传递参数" class="headerlink" title="click事件 intent跳转 传递参数"></a>click事件 intent跳转 传递参数</h4><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mFloatBtn.onClick &#123;</span><br><span class="line">  <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span><span class="symbol">@MainContentActivity</span>,MainActivity::<span class="class"><span class="keyword">class</span>.<span class="title">java</span>)</span></span><br><span class="line">  startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="只跳转，无参数传递"><a href="#只跳转，无参数传递" class="headerlink" title="只跳转，无参数传递"></a>只跳转，无参数传递</h4><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mFloatBtn.onClick &#123; startActivity&lt;MainActivity&gt;() &#125;</span><br></pre></td></tr></table></figure><a id="more"></a><h4 id="跳转，传参"><a href="#跳转，传参" class="headerlink" title="跳转，传参"></a>跳转，传参</h4><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mFloatBtn.onClick &#123;</span><br><span class="line">  startActivity&lt;MainActivity&gt;(</span><br><span class="line">          <span class="string">"name"</span> to <span class="string">"MainContent"</span> <span class="comment">// key to value</span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="fragment获取控件"><a href="#fragment获取控件" class="headerlink" title="fragment获取控件"></a>fragment获取控件</h4><p>kotlin 在activity中，支持无需findviewbyid，控件直接可使用<br>但 fragment中，不支持，只好 find控件</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">var</span> mTxt: TextView? = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreateView</span><span class="params">(inflater: <span class="type">LayoutInflater</span>?, container: <span class="type">ViewGroup</span>?,</span></span></span><br><span class="line"><span class="function"><span class="params">            savedInstanceState: <span class="type">Bundle</span>?)</span></span>: View? &#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">val</span> view = inflater!!.inflate(R.layout.frag_textview_content, <span class="literal">null</span>)</span><br><span class="line">   initView(view)</span><br><span class="line">   setUpViews()</span><br><span class="line">   <span class="keyword">return</span> view</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">initView</span><span class="params">(view: <span class="type">View</span>)</span></span> &#123;</span><br><span class="line">   mTxt = view.find(R.id.mTxt)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;搬运自CSDN:&lt;a href=&quot;http://blog.csdn.net/qqduxingzhe/article/details/76474813&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; kotlin click事件 intent跳转 fragment获取控件&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;click事件-intent跳转-传递参数&quot;&gt;&lt;a href=&quot;#click事件-intent跳转-传递参数&quot; class=&quot;headerlink&quot; title=&quot;click事件 intent跳转 传递参数&quot;&gt;&lt;/a&gt;click事件 intent跳转 传递参数&lt;/h4&gt;&lt;figure class=&quot;highlight kotlin&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mFloatBtn.onClick &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;val&lt;/span&gt; intent = Intent(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;@MainContentActivity&lt;/span&gt;,MainActivity::&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;.&lt;span class=&quot;title&quot;&gt;java&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  startActivity(intent)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;只跳转，无参数传递&quot;&gt;&lt;a href=&quot;#只跳转，无参数传递&quot; class=&quot;headerlink&quot; title=&quot;只跳转，无参数传递&quot;&gt;&lt;/a&gt;只跳转，无参数传递&lt;/h4&gt;&lt;figure class=&quot;highlight kotlin&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mFloatBtn.onClick &amp;#123; startActivity&amp;lt;MainActivity&amp;gt;() &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="android" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/android/"/>
+    
+      <category term="kotlin" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/android/kotlin/"/>
+    
+    
+      <category term="android" scheme="https://brady2037.github.io/tags/android/"/>
+    
+      <category term="kotlin" scheme="https://brady2037.github.io/tags/kotlin/"/>
+    
+      <category term="intent" scheme="https://brady2037.github.io/tags/intent/"/>
+    
+      <category term="fragment" scheme="https://brady2037.github.io/tags/fragment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于mac下gradlew命令不能使用</title>
+    <link href="https://brady2037.github.io/2017/10/30/%E5%85%B3%E4%BA%8Emac%E4%B8%8Bgradlew%E5%91%BD%E4%BB%A4%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8/"/>
+    <id>https://brady2037.github.io/2017/10/30/关于mac下gradlew命令不能使用/</id>
+    <published>2017-10-30T01:56:48.000Z</published>
+    <updated>2017-12-18T14:51:55.815Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天项目编译错误后需要看详细日志,发现gradlew命令提示找不到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash: gradlew: command not found</span><br></pre></td></tr></table></figure></p><p>Google了一下找到了解决的方法</p><p>macOS下使用gradlew命令需要再命令前加上<code>./</code><br>比如:<code>./gradlew --info assembleDebug</code><br>之后会提示权限:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash: ./gradlew: Permission denied</span><br></pre></td></tr></table></figure></p><p>运行:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x gradlew</span><br></pre></td></tr></table></figure></p><p>之后就可以使用了</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天项目编译错误后需要看详细日志,发现gradlew命令提示找不到&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="android" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/android/"/>
+    
+      <category term="gradle" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/android/gradle/"/>
+    
+    
+      <category term="android" scheme="https://brady2037.github.io/tags/android/"/>
+    
+      <category term="gradle" scheme="https://brady2037.github.io/tags/gradle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Android Studio3.0升级</title>
+    <link href="https://brady2037.github.io/2017/10/27/%E5%85%B3%E4%BA%8EAndroid-Studio3-0/"/>
+    <id>https://brady2037.github.io/2017/10/27/关于Android-Studio3-0/</id>
+    <published>2017-10-27T06:45:16.000Z</published>
+    <updated>2017-12-18T14:51:55.815Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="升级3-0之后打开项目报错，这里记录一下解决的过程"><a href="#升级3-0之后打开项目报错，这里记录一下解决的过程" class="headerlink" title="升级3.0之后打开项目报错，这里记录一下解决的过程"></a>升级3.0之后打开项目报错，这里记录一下解决的过程</h4><p>首先更新了gradle版本</p><p><img src="http://oph0392na.bkt.clouddn.com/2017-10-27-屏幕快照 2017-10-27 15.48.27.png" height="1269" width="585"></p><a id="more"></a><p>之后报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Gradle sync failed: Cannot set the value of read-only property &apos;outputFile&apos; for ApkVariantOutputImpl_Decorated&#123;apkData=Main&#123;type=MAIN, fullName=xiaomiDebug, filters=[]&#125;&#125; of type com.android.build.gradle.internal.api.ApkVariantOutputImpl.</span><br></pre></td></tr></table></figure></p><p>Google了一下，是因为项目Gradle下使用的部分代码语法变了<br>这是项目中原本自定义构建APK的代码<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">applicationVariants.all &#123; variant -&gt;</span><br><span class="line">       variant.outputs.<span class="keyword">each</span> &#123; output -&gt;</span><br><span class="line">           <span class="keyword">def</span> newName</span><br><span class="line">           <span class="keyword">def</span> timeNow</span><br><span class="line">           <span class="keyword">def</span> outputFile = output.outputFile</span><br><span class="line">           <span class="keyword">if</span> (<span class="keyword">Boolean</span>.valueOf(IS_JENKINS)) &#123;</span><br><span class="line">               timeNow = JENKINS_TIME</span><br><span class="line">               newName = APP_PACKAGE_NAME + <span class="string">"-android-V$&#123;defaultConfig.versionName&#125;-"</span> + variant.productFlavors[<span class="number">0</span>].name + <span class="string">"-"</span> + timeNow + <span class="string">"-"</span> + variant.buildType.name + <span class="string">'.apk'</span></span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               timeNow = getDate()</span><br><span class="line">               <span class="keyword">if</span> (<span class="string">'debug'</span> == variant.buildType.name) &#123;</span><br><span class="line">                   newName = APP_PACKAGE_NAME + <span class="string">"-android-V$&#123;defaultConfig.versionName&#125;-debug.apk"</span></span><br><span class="line">               &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                   newName = APP_PACKAGE_NAME + <span class="string">"-android-V$&#123;defaultConfig.versionName&#125;-"</span> + variant.productFlavors[<span class="number">0</span>].name + <span class="string">"-"</span> + timeNow + <span class="string">"-"</span> + variant.buildType.name + <span class="string">'.apk'</span></span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">           output.outputFile = <span class="keyword">new</span> <span class="keyword">File</span>(outDirectory, newName)</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p><p>其中的这句 <code>variant.outputs.each { output -&gt;</code><br>需要把<code>each</code>替换成<code>all</code><br>获取输出文件的代码<code>output.outputFile</code>已经变为只读,现在直接使用<code>outputFileName</code>赋值即可修改输出的名称</p><p>修改后的代码<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">applicationVariants.all &#123; variant -&gt;</span><br><span class="line">        variant.outputs.all &#123; output -&gt;</span><br><span class="line">            <span class="keyword">def</span> newName</span><br><span class="line">            <span class="keyword">def</span> timeNow</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">Boolean</span>.valueOf(IS_JENKINS)) &#123;</span><br><span class="line">                timeNow = JENKINS_TIME</span><br><span class="line">                newName = APP_PACKAGE_NAME + <span class="string">"-android-V$&#123;defaultConfig.versionName&#125;-"</span> + variant.productFlavors[<span class="number">0</span>].name + <span class="string">"-"</span> + timeNow + <span class="string">"-"</span> + variant.buildType.name + <span class="string">'.apk'</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                timeNow = getDate()</span><br><span class="line">                <span class="keyword">if</span> (<span class="string">'debug'</span> == variant.buildType.name) &#123;</span><br><span class="line">                    newName = APP_PACKAGE_NAME + <span class="string">"-android-V$&#123;defaultConfig.versionName&#125;-debug.apk"</span></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    newName = APP_PACKAGE_NAME + <span class="string">"-android-V$&#123;defaultConfig.versionName&#125;-"</span> + variant.productFlavors[<span class="number">0</span>].name + <span class="string">"-"</span> + timeNow + <span class="string">"-"</span> + variant.buildType.name + <span class="string">'.apk'</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            outputFileName = newName</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p><p>修改后 Try Again 继续报错</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Gradle sync failed: Cannot choose between the following configurations of project :androidSDK:</span><br><span class="line">- debugApiElements</span><br><span class="line">- debugRuntimeElements</span><br><span class="line">- releaseApiElements</span><br><span class="line">- releaseRuntimeElements</span><br><span class="line">All of them match the consumer attributes:</span><br><span class="line">- Configuration &apos;debugApiElements&apos;:</span><br><span class="line">- Found com.android.build.api.attributes.BuildTypeAttr &apos;debug&apos; but wasn&apos;t required.</span><br><span class="line">- Found com.android.build.gradle.internal.dependency.AndroidTypeAttr &apos;Aar&apos; but wasn&apos;t required.</span><br><span class="line">- Found com.android.build.gradle.internal.dependency.VariantAttr &apos;debug&apos; but wasn&apos;t required.</span><br><span class="line">- Found org.gradle.api.attributes.Usage &apos;java-api&apos; but wasn&apos;t required.</span><br><span class="line">- Configuration &apos;debugRuntimeElements&apos;:</span><br><span class="line">- Found com.android.build.api.attributes.BuildTypeAttr &apos;debug&apos; but wasn&apos;t required.</span><br><span class="line">- Found com.android.build.gradle.internal.dependency.AndroidTypeAttr &apos;Aar&apos; but wasn&apos;t required.</span><br><span class="line">- Found com.android.build.gradle.internal.dependency.VariantAttr &apos;debug&apos; but wasn&apos;t required.</span><br><span class="line">- Found org.gradle... (show balloon)</span><br></pre></td></tr></table></figure><p>看报错说明是因为依赖的一个model<code>:androidSDK</code>,Google说明新版中依赖项目的语法改变了,依赖包使用旧的语法没有报错,<br>旧版<code>compile project(&#39;:androidSDK&#39;)</code><br>新版<code>implementation project(&#39;:androidSDK&#39;)</code><br>貌似现在依赖包也可以使用<code>implementation</code></p><p>这里还提示一点,gradle文件中:</p><p><code>compile</code> 替换为 <code>implementation</code><br> <code>apt</code> 替换为 <code>annotationProcessor</code><br> <code>testCompile</code> 替换为 <code>androidTestImplementation</code><br><code>releaseCompile</code> 替换为 <code>releaseImplementation</code></p><p>这里注意一点:<code>compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])</code><br>不需要替换<code>compile</code>,看样子只有依赖包的时候才需要替换<br>还有一点,有的依赖包替换成<code>implementation</code>提示找不到,换回<code>compile</code>又可以了</p><p>继续Tran Again提示需要更新Android SDK Build Tools version 至 26.0.2<br>之后报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Error:android-apt plugin is incompatible with the Android Gradle plugin.  Please use &apos;annotationProcessor&apos; configuration instead.</span><br><span class="line">Error:All flavors must now belong to a named flavor dimension. Learn more at https://d.android.com/r/tools/flavorDimensions-missing-error-message.html</span><br></pre></td></tr></table></figure></p><p>继续Google,新版去掉了android-apt,所以删除项目Gradle中<code>apply plugin: &#39;android-apt&#39;</code>,只保留<code>apply plugin: &#39;com.android.application&#39;</code><br>把<code>apt</code>替换为<code>annotationProcessor</code></p><p>Try Again:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error:All flavors must now belong to a named flavor dimension. Learn more at https://d.android.com/r/tools/flavorDimensions-missing-error-message.html</span><br></pre></td></tr></table></figure></p><p>根据官网说法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">you need to first declare one or more dimensions using the flavorDimensions property. After that, assign each flavor to one of the dimensions you declared</span><br></pre></td></tr></table></figure></p><p>必须指定一个或多个 flavor dimensions<br>flavorDimensions 后面可以添加多个不同类型的参数例如：<code>flavorDimensions &quot;tier&quot;, &quot;minApi&quot;</code><br>官方示例:<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Specifies two flavor dimensions.</span></span><br><span class="line">flavorDimensions <span class="string">"tier"</span>, <span class="string">"minApi"</span></span><br><span class="line"></span><br><span class="line">productFlavors &#123;</span><br><span class="line">     free &#123;</span><br><span class="line">      <span class="comment">// Assigns this product flavor to the "tier" flavor dimension. Specifying</span></span><br><span class="line">      <span class="comment">// this property is optional if you are using only one dimension.</span></span><br><span class="line">      dimension <span class="string">"tier"</span></span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    paid &#123;</span><br><span class="line">      dimension <span class="string">"tier"</span></span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    minApi23 &#123;</span><br><span class="line">        dimension <span class="string">"minApi"</span></span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    minApi18 &#123;</span><br><span class="line">        dimension <span class="string">"minApi"</span></span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>项目中原来的代码:<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">productFlavors &#123;</span><br><span class="line">        _360 &#123;&#125;</span><br><span class="line">        xiaomi &#123;&#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p><p>修改后的代码:<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">flavorDimensions <span class="string">"default"</span></span><br><span class="line">productFlavors &#123;</span><br><span class="line">   _360 &#123;</span><br><span class="line">       dimension <span class="string">"default"</span></span><br><span class="line">   &#125;</span><br><span class="line">   xiaomi &#123;</span><br><span class="line">       dimension <span class="string">"default"</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>继续Tran Again:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Error:found unexpected optical bounds (red pixel) on top border at x=102.</span><br><span class="line">Error:java.util.concurrent.ExecutionException: com.android.tools.aapt2.Aapt2Exception: AAPT2 error: check logs for details</span><br><span class="line">Error:Execution failed for task &apos;:ygj_new:merge_360DebugResources&apos;.</span><br><span class="line">&gt; Error: java.util.concurrent.ExecutionException: com.android.tools.aapt2.Aapt2Exception: AAPT2 error: check logs for details</span><br></pre></td></tr></table></figure></p><p>是因为项目.9图片中含有红色边线,删除即可</p><p>继续Try Again:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FAILURE: Build failed with an exception.</span><br><span class="line"></span><br><span class="line">* What went wrong:</span><br><span class="line">Task &apos;compileDebug&apos; is ambiguous in root project &apos;eachonline_upgrade&apos;. Candidates are: &apos;compileDebugAidl&apos;, &apos;compileDebugAndroidTestAidl&apos;, &apos;compileDebugAndroidTestJavaWithJavac&apos;, &apos;compileDebugAndroidTestKotlin&apos;, &apos;compileDebugAndroidTestNdk&apos;, &apos;compileDebugAndroidTestRenderscript&apos;, &apos;compileDebugAndroidTestShaders&apos;, &apos;compileDebugAndroidTestSources&apos;, &apos;compileDebugJavaWithJavac&apos;, &apos;compileDebugKotlin&apos;, &apos;compileDebugNdk&apos;, &apos;compileDebugRenderscript&apos;, &apos;compileDebugShaders&apos;, &apos;compileDebugSources&apos;, &apos;compileDebugUnitTestJavaWithJavac&apos;, &apos;compileDebugUnitTestKotlin&apos;, &apos;compileDebugUnitTestSources&apos;.</span><br></pre></td></tr></table></figure></p><p>继续Tran Again:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Error:Execution failed for task &apos;:ygj_new:transformClassesWithAndroidGradleClassShrinkerFor_360Debug&apos;.</span><br><span class="line">&gt; java.lang.ArrayIndexOutOfBoundsException (no error message)</span><br></pre></td></tr></table></figure></p><p>对于这个错误真是百思不得其解,研究了两天在一篇博文的启示下把Instant Run关掉,之后就成功了!<br>这里附上这篇博文: <a href="http://www.jianshu.com/p/64c819e0d8a3" target="_blank" rel="noopener">记录使用Instant Run的一个坑</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;升级3-0之后打开项目报错，这里记录一下解决的过程&quot;&gt;&lt;a href=&quot;#升级3-0之后打开项目报错，这里记录一下解决的过程&quot; class=&quot;headerlink&quot; title=&quot;升级3.0之后打开项目报错，这里记录一下解决的过程&quot;&gt;&lt;/a&gt;升级3.0之后打开项目报错，这里记录一下解决的过程&lt;/h4&gt;&lt;p&gt;首先更新了gradle版本&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://oph0392na.bkt.clouddn.com/2017-10-27-屏幕快照 2017-10-27 15.48.27.png&quot; height=&quot;1269&quot; width=&quot;585&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="android" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/android/"/>
+    
+      <category term="android studio" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/android/android-studio/"/>
+    
+    
+      <category term="技术" scheme="https://brady2037.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="android" scheme="https://brady2037.github.io/tags/android/"/>
+    
+      <category term="android studio" scheme="https://brady2037.github.io/tags/android-studio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo新环境部署</title>
+    <link href="https://brady2037.github.io/2017/10/20/Hexo%E6%96%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"/>
+    <id>https://brady2037.github.io/2017/10/20/Hexo新环境部署/</id>
+    <published>2017-10-20T02:50:00.000Z</published>
+    <updated>2017-12-18T14:51:55.815Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h4><p>一开始是想把整个博客的文件备份下来,所以想到了Github<br>把整个博客上传到了Github才想起来Github私有项目是属于付费的,所以看了另一个平时常用的git服务:<code>oschina</code><br>上面可以直接导入Github的项目,clone下来之后试了一下<code>hexo clean</code>,很显然hexo的环境需要重新部署,但是<code>hexo init</code>需要非空的目录,所以Google了一下,在知乎上找到了一篇文章</p><h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p>git clone 下来之后,在博客文件夹下依次执行命令:<br><code>npm install hexo</code><br><code>npm install</code><br><code>npm install hexo-deployer-git</code><br>记得不需要hexo init这条指令</p><a id="more"></a><p>之后就可以正常使用了,重新上传试试~<br><code>hexo clean</code> 正常<br><code>hexo g</code> 也正常<br><code>hexo d</code> 提交成功</p><blockquote><footer><strong>CrazyMilk</strong><cite><a href="https://zhihu.com/question/21193762/answer/79109280" target="_blank" rel="noopener">使用hexo，如果换了电脑怎么更新博客？</a></cite></footer></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h4&gt;&lt;p&gt;一开始是想把整个博客的文件备份下来,所以想到了Github&lt;br&gt;把整个博客上传到了Github才想起来Github私有项目是属于付费的,所以看了另一个平时常用的git服务:&lt;code&gt;oschina&lt;/code&gt;&lt;br&gt;上面可以直接导入Github的项目,clone下来之后试了一下&lt;code&gt;hexo clean&lt;/code&gt;,很显然hexo的环境需要重新部署,但是&lt;code&gt;hexo init&lt;/code&gt;需要非空的目录,所以Google了一下,在知乎上找到了一篇文章&lt;/p&gt;
+&lt;h4 id=&quot;部署&quot;&gt;&lt;a href=&quot;#部署&quot; class=&quot;headerlink&quot; title=&quot;部署&quot;&gt;&lt;/a&gt;部署&lt;/h4&gt;&lt;p&gt;git clone 下来之后,在博客文件夹下依次执行命令:&lt;br&gt;&lt;code&gt;npm install hexo&lt;/code&gt;&lt;br&gt;&lt;code&gt;npm install&lt;/code&gt;&lt;br&gt;&lt;code&gt;npm install hexo-deployer-git&lt;/code&gt;&lt;br&gt;记得不需要hexo init这条指令&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="blog" scheme="https://brady2037.github.io/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="https://brady2037.github.io/tags/blog/"/>
+    
+      <category term="Hexo" scheme="https://brady2037.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开篇!</title>
+    <link href="https://brady2037.github.io/2017/10/20/%E5%BC%80%E7%AF%87/"/>
+    <id>https://brady2037.github.io/2017/10/20/开篇/</id>
+    <published>2017-10-20T01:56:45.000Z</published>
+    <updated>2017-12-18T14:51:55.815Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="作为本博客开通的第一篇文章-留作纪念😄"><a href="#作为本博客开通的第一篇文章-留作纪念😄" class="headerlink" title="作为本博客开通的第一篇文章,留作纪念😄!"></a>作为本博客开通的第一篇文章,留作纪念😄!</h4><p>花了两天时间来回配置好几遍,终于完成了,之前总是遗憾没能把一些经验分享出来</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;作为本博客开通的第一篇文章-留作纪念😄&quot;&gt;&lt;a href=&quot;#作为本博客开通的第一篇文章-留作纪念😄&quot; class=&quot;headerlink&quot; title=&quot;作为本博客开通的第一篇文章,留作纪念😄!&quot;&gt;&lt;/a&gt;作为本博客开通的第一篇文章,留作纪念😄!&lt;/h4
+      
+    
+    </summary>
+    
+      <category term="随想" scheme="https://brady2037.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+      <category term="随想" scheme="https://brady2037.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+</feed>
