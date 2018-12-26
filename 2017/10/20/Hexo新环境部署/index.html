@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Brady&#39;s Notes">
 <meta property="og:description" content="起因一开始是想把整个博客的文件备份下来,所以想到了Github把整个博客上传到了Github才想起来Github私有项目是属于付费的,所以看了另一个平时常用的git服务:oschina上面可以直接导入Github的项目,clone下来之后试了一下hexo clean,很显然hexo的环境需要重新部署,但是hexo init需要非空的目录,所以Google了一下,在知乎上找到了一篇文章 部署git">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-18T14:51:55.815Z">
+<meta property="og:updated_time" content="2018-01-11T12:21:31.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo新环境部署">
 <meta name="twitter:description" content="起因一开始是想把整个博客的文件备份下来,所以想到了Github把整个博客上传到了Github才想起来Github私有项目是属于付费的,所以看了另一个平时常用的git服务:oschina上面可以直接导入Github的项目,clone下来之后试了一下hexo clean,很显然hexo的环境需要重新部署,但是hexo init需要非空的目录,所以Google了一下,在知乎上找到了一篇文章 部署git">
@@ -374,17 +374,16 @@
 
           
             
-            <!--noindex-->
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/10/20/Hexo新环境部署/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/10/20/Hexo新环境部署/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/10/20/Hexo新环境部署/" itemprop="commentCount"></span>
                 </a>
               </span>
-              <!--/noindex-->
             
           
 
@@ -422,7 +421,7 @@
 
       
         <h4 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h4><p>一开始是想把整个博客的文件备份下来,所以想到了Github<br>把整个博客上传到了Github才想起来Github私有项目是属于付费的,所以看了另一个平时常用的git服务:<code>oschina</code><br>上面可以直接导入Github的项目,clone下来之后试了一下<code>hexo clean</code>,很显然hexo的环境需要重新部署,但是<code>hexo init</code>需要非空的目录,所以Google了一下,在知乎上找到了一篇文章</p>
-<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p>git clone 下来之后,在博客文件夹下依次执行命令:<br><code>npm install hexo</code><br><code>npm install</code><br><code>npm install hexo-deployer-git</code><br>记得不需要hexo init这条指令</p>
+<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p>git clone 下来之后,在博客文件夹下依次执行命令:<br><code>npm install hexo</code> 或者 <code>npm install -g hexo-cli</code><br><code>npm install</code><br><code>npm install hexo-deployer-git</code><br>记得不需要hexo init这条指令</p>
 <a id="more"></a>
 <p>之后就可以正常使用了,重新上传试试~<br><code>hexo clean</code> 正常<br><code>hexo g</code> 也正常<br><code>hexo d</code> 提交成功</p>
 <blockquote><footer><strong>CrazyMilk</strong><cite><a href="https://zhihu.com/question/21193762/answer/79109280" target="_blank" rel="noopener">使用hexo，如果换了电脑怎么更新博客？</a></cite></footer></blockquote>
@@ -500,7 +499,12 @@
           
   
     <div class="comments" id="comments">
-      <div id="hypercomments_widget"></div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     </div>
   
 
@@ -553,7 +557,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -564,7 +568,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -575,7 +579,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -669,7 +673,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -798,34 +802,36 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://brady2037.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://brady2037.github.io/2017/10/20/Hexo新环境部署/';
+          this.page.identifier = '2017/10/20/Hexo新环境部署/';
+          this.page.title = 'Hexo新环境部署';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://brady2037.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
 
 
 
-	
-
-		<script type="text/javascript">
-		_hcwp = window._hcwp || [];
-
-		_hcwp.push({widget:"Bloggerstream", widget_id: 96782, selector:".hc-comment-count", label: "{\%COUNT%\}" });
-
-		
-		_hcwp.push({widget:"Stream", widget_id: 96782, xid: "2017/10/20/Hexo新环境部署/"});
-		
-
-		(function() {
-		if("HC_LOAD_INIT" in window)return;
-		HC_LOAD_INIT = true;
-		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
-		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/96782/"+lang+"/widget.js";
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(hcc, s.nextSibling);
-		})();
-		</script>
 
 	
 
 
+
+
+
+  
 
 
 
