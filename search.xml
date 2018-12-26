@@ -51,8 +51,8 @@
     <url>%2F2017%2F11%2F15%2F%E5%85%B3%E4%BA%8EtransformClassesWithProfilers-transformFor%2F</url>
     <content type="text"><![CDATA[升级AndroidStudio3.0后,运行项目报错1Error:Execution failed for task &apos;:ygj_new:transformClassesWithProfilers-transformFor_360Debug&apos;. &gt; 3 在Edit configuration中关闭advanced profiling即可]]></content>
       <tags>
-        <tag>android</tag>
         <tag>技术</tag>
+        <tag>android</tag>
         <tag>android studio</tag>
       </tags>
   </entry>
@@ -139,8 +139,8 @@
         <category>android studio</category>
       </categories>
       <tags>
-        <tag>android</tag>
         <tag>技术</tag>
+        <tag>android</tag>
         <tag>android studio</tag>
       </tags>
   </entry>
