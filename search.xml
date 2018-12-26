@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[DataBinderMapperImpl无法生成]]></title>
+    <url>%2F2018%2F12%2F26%2FDataBinderMapperImpl%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%2F</url>
+    <content type="text"><![CDATA[MVC的一个老项目，需要从另一个MVVM的项目里移植过来一些功能，新建了一个module开启了databinding后报错 1ClassNotFoundException: Didn&apos;t find class &quot;android.databinding.DataBinderMapperImpl&quot; on path 谷歌之，在Stack Overflow上看到一段提示： Got my own lib and multiple apps. Had to add both to lib and app gradle files. 解决方法lib module与 app module都需要在各自的 gradle 文件中开启databinding： 123456android &#123; .... dataBinding &#123; enabled = true &#125;&#125; 参考：Stack Overflow]]></content>
+      <categories>
+        <category>技术</category>
+        <category>android</category>
+        <category>问题解决</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>android</tag>
+        <tag>databinding</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[VPS安装开源软件 FileBrowser网盘]]></title>
     <url>%2F2018%2F02%2F05%2FVPS%E5%AE%89%E8%A3%85%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6-FileManager%E7%BD%91%E7%9B%98%2F</url>
-    <content type="text"><![CDATA[项目主页：[https://filebrowser.github.io/) 在VPS服务器上传下载文件一开始是不太方便的，刚购买VPS的那段时间，最先使用scp命令上传文件、apache2下载文件，后来了解到有相关的FTP GUI客户端FileZilla，稍微方便些，但是使用体验还是不太好，偶然在一篇博文上看到一个开源的服务器端网盘，使用体验堪比百度云，分享给大家 下载 release页面 大家选择相应的系统版本下载个人使用的系统为linux系列的Ubuntu 16.04 LTS amd64，故选择列表中的linux-amd64-filebrowser.tar.gz ssh连接上vps后 1wget https://github.com/filebrowser/filebrowser/releases/download/v1.5.2/linux-amd64-filebrowser.tar.gz 新建程序所在文件夹 filemanager1sudo mkdir filemanager 移动至程序目录1sudo mv linux-amd64-filebrowser.tar.gz filemanager/ cd至目录后解压1sudo tar -xzf linux-amd64-filebrowser.tar.gz 将新建的目录移动至/home下1sudo mv filemanager/ /home 配置环境变量编辑1sudo nano ~/.bashrc 移动至行尾后新增1export PATH=$PATH:/home/filemanager 然后Ctrl+O写入，Ctrl+C退出，之后刷新 1source ~/.bashrc 新建网盘文件所在目录 1sudo mkdir /home/dropbox 运行在网盘文件目录下运行filebrowser，在浏览器中打开 vps的ip + 提示的端口即可 也可以自定义端口号和网盘文件所在目录 1filebrowser --port 3065 --scope /home/dropbox 默认用户为：admin 默认密码为：admin]]></content>
+    <content type="text"><![CDATA[项目主页：FileBrowser 在VPS服务器上传下载文件一开始是不太方便的，刚购买VPS的那段时间，最先使用scp命令上传文件、apache2下载文件，后来了解到有相关的FTP GUI客户端FileZilla，稍微方便些，但是使用体验还是不太好，偶然在一篇博文上看到一个开源的服务器端网盘，使用体验堪比百度云，分享给大家 下载 release页面 大家选择相应的系统版本下载个人使用的系统为linux系列的Ubuntu 16.04 LTS amd64，故选择列表中的linux-amd64-filebrowser.tar.gz ssh连接上vps后 1wget https://github.com/filebrowser/filebrowser/releases/download/v1.5.2/linux-amd64-filebrowser.tar.gz 新建程序所在文件夹 filemanager1sudo mkdir filemanager 移动至程序目录1sudo mv linux-amd64-filebrowser.tar.gz filemanager/ cd至目录后解压1sudo tar -xzf linux-amd64-filebrowser.tar.gz 将新建的目录移动至/home下1sudo mv filemanager/ /home 配置环境变量编辑1sudo nano ~/.bashrc 移动至行尾后新增1export PATH=$PATH:/home/filemanager 然后Ctrl+O写入，Ctrl+C退出，之后刷新 1source ~/.bashrc 新建网盘文件所在目录 1sudo mkdir /home/dropbox 运行在网盘文件目录下运行filebrowser，在浏览器中打开 vps的ip + 提示的端口即可 也可以自定义端口号和网盘文件所在目录 1filebrowser --port 3065 --scope /home/dropbox 默认用户为：admin 默认密码为：admin]]></content>
       <categories>
         <category>技术</category>
         <category>vps</category>
@@ -81,8 +96,8 @@
         <category>问题解决</category>
       </categories>
       <tags>
-        <tag>fragment</tag>
         <tag>viewpager</tag>
+        <tag>fragment</tag>
         <tag>recyclerview</tag>
         <tag>滑动</tag>
         <tag>问题</tag>
@@ -110,9 +125,9 @@
       </categories>
       <tags>
         <tag>android</tag>
+        <tag>fragment</tag>
         <tag>kotlin</tag>
         <tag>intent</tag>
-        <tag>fragment</tag>
       </tags>
   </entry>
   <entry>

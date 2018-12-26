@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://brady2037.github.io/"/>
-  <updated>2018-04-13T09:02:42.786Z</updated>
+  <updated>2018-12-26T12:49:10.094Z</updated>
   <id>https://brady2037.github.io/</id>
   
   <author>
@@ -17,18 +17,51 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>DataBinderMapperImpl无法生成</title>
+    <link href="https://brady2037.github.io/2018/12/26/DataBinderMapperImpl%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90/"/>
+    <id>https://brady2037.github.io/2018/12/26/DataBinderMapperImpl无法生成/</id>
+    <published>2018-12-26T12:10:24.000Z</published>
+    <updated>2018-12-26T12:49:10.094Z</updated>
+    
+    <content type="html"><![CDATA[<p>MVC的一个老项目，需要从另一个MVVM的项目里移植过来一些功能，新建了一个module开启了databinding后报错</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ClassNotFoundException: Didn&apos;t find class &quot;android.databinding.DataBinderMapperImpl&quot; on path</span><br></pre></td></tr></table></figure><p>谷歌之，在Stack Overflow上看到一段提示：</p><p><em> Got my own lib and multiple apps. Had to add both to lib and app gradle files. </em></p><a id="more"></a><h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>lib module与 app module都需要在各自的 <code>gradle</code> 文件中开启databinding：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    ....</span><br><span class="line">    dataBinding &#123;</span><br><span class="line">        enabled = <span class="keyword">true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>参考：<a href="https://stackoverflow.com/questions/40882253/classnotfoundexception-didnt-find-class-android-databinding-databindermapper/42067249" target="_blank" rel="noopener">Stack Overflow</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MVC的一个老项目，需要从另一个MVVM的项目里移植过来一些功能，新建了一个module开启了databinding后报错&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ClassNotFoundException: Didn&amp;apos;t find class &amp;quot;android.databinding.DataBinderMapperImpl&amp;quot; on path&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;谷歌之，在Stack Overflow上看到一段提示：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt; Got my own lib and multiple apps. Had to add both to lib and app gradle files. &lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="android" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/android/"/>
+    
+      <category term="问题解决" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/android/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+    
+      <category term="技术" scheme="https://brady2037.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="android" scheme="https://brady2037.github.io/tags/android/"/>
+    
+      <category term="databinding" scheme="https://brady2037.github.io/tags/databinding/"/>
+    
+  </entry>
+  
+  <entry>
     <title>VPS安装开源软件 FileBrowser网盘</title>
     <link href="https://brady2037.github.io/2018/02/05/VPS%E5%AE%89%E8%A3%85%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6-FileManager%E7%BD%91%E7%9B%98/"/>
     <id>https://brady2037.github.io/2018/02/05/VPS安装开源软件-FileManager网盘/</id>
     <published>2018-02-05T09:06:56.000Z</published>
-    <updated>2018-04-13T09:02:42.786Z</updated>
+    <updated>2018-12-26T12:49:12.766Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>项目主页：[<a href="https://filebrowser.github.io/" target="_blank" rel="noopener">https://filebrowser.github.io/</a>)</p></blockquote><p>在VPS服务器上传下载文件一开始是不太方便的，刚购买VPS的那段时间，最先使用scp命令上传文件、apache2下载文件，后来了解到有相关的FTP GUI客户端FileZilla，稍微方便些，但是使用体验还是不太好，偶然在一篇博文上看到一个开源的服务器端网盘，使用体验堪比百度云，分享给大家</p><h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><p><a href="https://github.com/filebrowser/filebrowser/releases" target="_blank" rel="noopener"> release页面 </a>  大家选择相应的系统版本下载<br>个人使用的系统为linux系列的<code>Ubuntu 16.04 LTS amd64</code>，故选择列表中的<code>linux-amd64-filebrowser.tar.gz</code></p><a id="more"></a><p>ssh连接上vps后</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/filebrowser/filebrowser/releases/download/v1.5.2/linux-amd64-filebrowser.tar.gz</span><br></pre></td></tr></table></figure><p>新建程序所在文件夹 filemanager<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir filemanager</span><br></pre></td></tr></table></figure></p><p>移动至程序目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv linux-amd64-filebrowser.tar.gz filemanager/</span><br></pre></td></tr></table></figure></p><p>cd至目录后解压<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xzf linux-amd64-filebrowser.tar.gz</span><br></pre></td></tr></table></figure></p><p>将新建的目录移动至<code>/home</code>下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv filemanager/ /home</span><br></pre></td></tr></table></figure></p><h5 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h5><p>编辑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano ~/.bashrc</span><br></pre></td></tr></table></figure></p><p>移动至行尾后新增<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/home/filemanager</span><br></pre></td></tr></table></figure></p><p>然后<code>Ctrl+O</code>写入，<code>Ctrl+C</code>退出，之后刷新</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure><p>新建网盘文件所在目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /home/dropbox</span><br></pre></td></tr></table></figure><h5 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h5><p>在网盘文件目录下运行<code>filebrowser</code>，在浏览器中打开 <code>vps的ip + 提示的端口</code>即可</p><p>也可以自定义端口号和网盘文件所在目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filebrowser --port 3065 --scope  /home/dropbox</span><br></pre></td></tr></table></figure><p>默认用户为：<code>admin</code></p><p>默认密码为：<code>admin</code></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>项目主页：<a href="https://filebrowser.github.io/" target="_blank" rel="noopener">FileBrowser</a></p></blockquote><p>在VPS服务器上传下载文件一开始是不太方便的，刚购买VPS的那段时间，最先使用scp命令上传文件、apache2下载文件，后来了解到有相关的FTP GUI客户端FileZilla，稍微方便些，但是使用体验还是不太好，偶然在一篇博文上看到一个开源的服务器端网盘，使用体验堪比百度云，分享给大家</p><h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><p><a href="https://github.com/filebrowser/filebrowser/releases" target="_blank" rel="noopener"> release页面 </a>  大家选择相应的系统版本下载<br>个人使用的系统为linux系列的<code>Ubuntu 16.04 LTS amd64</code>，故选择列表中的<code>linux-amd64-filebrowser.tar.gz</code></p><a id="more"></a><p>ssh连接上vps后</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/filebrowser/filebrowser/releases/download/v1.5.2/linux-amd64-filebrowser.tar.gz</span><br></pre></td></tr></table></figure><p>新建程序所在文件夹 filemanager<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir filemanager</span><br></pre></td></tr></table></figure></p><p>移动至程序目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv linux-amd64-filebrowser.tar.gz filemanager/</span><br></pre></td></tr></table></figure></p><p>cd至目录后解压<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xzf linux-amd64-filebrowser.tar.gz</span><br></pre></td></tr></table></figure></p><p>将新建的目录移动至<code>/home</code>下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv filemanager/ /home</span><br></pre></td></tr></table></figure></p><h5 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h5><p>编辑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano ~/.bashrc</span><br></pre></td></tr></table></figure></p><p>移动至行尾后新增<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/home/filemanager</span><br></pre></td></tr></table></figure></p><p>然后<code>Ctrl+O</code>写入，<code>Ctrl+C</code>退出，之后刷新</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure><p>新建网盘文件所在目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /home/dropbox</span><br></pre></td></tr></table></figure><h5 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h5><p>在网盘文件目录下运行<code>filebrowser</code>，在浏览器中打开 <code>vps的ip + 提示的端口</code>即可</p><p>也可以自定义端口号和网盘文件所在目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filebrowser --port 3065 --scope  /home/dropbox</span><br></pre></td></tr></table></figure><p>默认用户为：<code>admin</code></p><p>默认密码为：<code>admin</code></p>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;项目主页：[&lt;a href=&quot;https://filebrowser.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://filebrowser.github.io/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;项目主页：&lt;a href=&quot;https://filebrowser.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;FileBrowser&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在VPS服务器上传下载文件一开始是不太方便的，刚购买VPS的那段时间，最先使用scp命令上传文件、apache2下载文件，后来了解到有相关的FTP GUI客户端FileZilla，稍微方便些，但是使用体验还是不太好，偶然在一篇博文上看到一个开源的服务器端网盘，使用体验堪比百度云，分享给大家&lt;/p&gt;
 &lt;h5 id=&quot;下载&quot;&gt;&lt;a href=&quot;#下载&quot; class=&quot;headerlink&quot; title=&quot;下载&quot;&gt;&lt;/a&gt;下载&lt;/h5&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/filebrowser/filebrowser/releases&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; release页面 &lt;/a&gt;  大家选择相应的系统版本下载&lt;br&gt;个人使用的系统为linux系列的&lt;code&gt;Ubuntu 16.04 LTS amd64&lt;/code&gt;，故选择列表中的&lt;code&gt;linux-amd64-filebrowser.tar.gz&lt;/code&gt;&lt;/p&gt;
@@ -197,9 +230,9 @@
       <category term="问题解决" scheme="https://brady2037.github.io/categories/%E6%8A%80%E6%9C%AF/android/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
     
     
-      <category term="fragment" scheme="https://brady2037.github.io/tags/fragment/"/>
-    
       <category term="viewpager" scheme="https://brady2037.github.io/tags/viewpager/"/>
+    
+      <category term="fragment" scheme="https://brady2037.github.io/tags/fragment/"/>
     
       <category term="recyclerview" scheme="https://brady2037.github.io/tags/recyclerview/"/>
     
@@ -263,11 +296,11 @@
     
       <category term="android" scheme="https://brady2037.github.io/tags/android/"/>
     
+      <category term="fragment" scheme="https://brady2037.github.io/tags/fragment/"/>
+    
       <category term="kotlin" scheme="https://brady2037.github.io/tags/kotlin/"/>
     
       <category term="intent" scheme="https://brady2037.github.io/tags/intent/"/>
-    
-      <category term="fragment" scheme="https://brady2037.github.io/tags/fragment/"/>
     
   </entry>
   
