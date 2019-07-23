@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
-language:
-timezone:
+title: Brady's Notes
+subtitle: Quick notes
+description: Brady2037's Notes
+keywords: Blog Notes Brady Brady2037
+author: Brady2037
+language: zh-CN
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://brady2037.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -29,7 +29,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day-:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
@@ -78,4 +78,14 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  - type: git
+    repo: git@github.com:brady2037/brady2037.github.io.git
+    branch: master
+  - type: git
+    repo: https://git.coding.net/brady2037/brady2037.coding.me.git
+    branch: master
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
