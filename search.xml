@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[repo init 错误 has not been signed]]></title>
+    <url>%2F2019%2F08%2F07%2Frepo-init-%E9%94%99%E8%AF%AF-has-not-been-signed%2F</url>
+    <content type="text"><![CDATA[repo init 初始化时报错 123456 Resolving deltas: 100% (39/39), done. From aosp.tuna.tsinghua.edu.cn/platform/manifest * [new branch] stable -&gt; origin/stable * [new branch] windows -&gt; origin/windowsfatal: branch &apos;stable&apos; has not been signed 解决方法repo init 命令最后 加上--no-repo-verify选项，再次执行 1repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b master --no-repo-verify]]></content>
+      <categories>
+        <category>技术</category>
+        <category>android</category>
+        <category>问题解决</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>git</tag>
+        <tag>repo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[解决 maven google 用不了]]></title>
+    <url>%2F2019%2F07%2F30%2F%E8%A7%A3%E5%86%B3-maven-google-%E7%94%A8%E4%B8%8D%E4%BA%86%2F</url>
+    <content type="text"><![CDATA[国内好像不能访问https://maven.google.com，导致Android Studio一直在编译. 解决方法把maven { url ‘https://maven.google.com’ }替换成下面的就可以了 123456allprojects &#123; repositories &#123; jcenter() maven &#123; url &apos;https://dl.google.com/dl/android/maven2/&apos; &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>技术</category>
+        <category>android</category>
+        <category>问题解决</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>android</tag>
+        <tag>android studio</tag>
+        <tag>gradle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[DataBinderMapperImpl无法生成]]></title>
+    <url>%2F2018%2F12%2F26%2FDataBinderMapperImpl%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%2F</url>
+    <content type="text"><![CDATA[MVC的一个老项目，需要从另一个MVVM的项目里移植过来一些功能，新建了一个module开启了databinding后报错 1ClassNotFoundException: Didn&apos;t find class &quot;android.databinding.DataBinderMapperImpl&quot; on path 谷歌之，在Stack Overflow上看到一段提示： Got my own lib and multiple apps. Had to add both to lib and app gradle files. 解决方法lib module与 app module都需要在各自的 gradle 文件中开启databinding： 123456android &#123; .... dataBinding &#123; enabled = true &#125;&#125; 参考：Stack Overflow]]></content>
+      <categories>
+        <category>技术</category>
+        <category>android</category>
+        <category>问题解决</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>android</tag>
+        <tag>databinding</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[VPS安装开源软件 FileBrowser网盘]]></title>
+    <url>%2F2018%2F02%2F05%2FVPS%E5%AE%89%E8%A3%85%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6-FileManager%E7%BD%91%E7%9B%98%2F</url>
+    <content type="text"><![CDATA[项目主页：FileBrowser 在VPS服务器上传下载文件一开始是不太方便的，刚购买VPS的那段时间，最先使用scp命令上传文件、apache2下载文件，后来了解到有相关的FTP GUI客户端FileZilla，稍微方便些，但是使用体验还是不太好，偶然在一篇博文上看到一个开源的服务器端网盘，使用体验堪比百度云，分享给大家 下载 release页面 大家选择相应的系统版本下载个人使用的系统为linux系列的Ubuntu 16.04 LTS amd64，故选择列表中的linux-amd64-filebrowser.tar.gz ssh连接上vps后 1wget https://github.com/filebrowser/filebrowser/releases/download/v1.5.2/linux-amd64-filebrowser.tar.gz 新建程序所在文件夹 filemanager 1sudo mkdir filemanager 移动至程序目录 1sudo mv linux-amd64-filebrowser.tar.gz filemanager/ cd至目录后解压 1sudo tar -xzf linux-amd64-filebrowser.tar.gz 将新建的目录移动至/home下 1sudo mv filemanager/ /home 配置环境变量编辑 1sudo nano ~/.bashrc 移动至行尾后新增 1export PATH=$PATH:/home/filemanager 然后Ctrl+O写入，Ctrl+C退出，之后刷新 1source ~/.bashrc 新建网盘文件所在目录 1sudo mkdir /home/dropbox 运行在网盘文件目录下运行filebrowser，在浏览器中打开 vps的ip + 提示的端口即可 也可以自定义端口号和网盘文件所在目录 1filebrowser --port 3065 --scope /home/dropbox 默认用户为：admin 默认密码为：admin]]></content>
+      <categories>
+        <category>技术</category>
+        <category>vps</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>vps</tag>
+        <tag>linux软件</tag>
+        <tag>filebrowser</tag>
+        <tag>网盘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于 Git 提交错误10053]]></title>
+    <url>%2F2017%2F12%2F21%2F%E5%85%B3%E4%BA%8E-Git-%E6%8F%90%E4%BA%A4%E9%94%99%E8%AF%AF10053%2F</url>
+    <content type="text"><![CDATA[Git提交推送时报错12345Push failed Failed with error: The remote end hung up unexpectedly The remote end hung up unexpectedly unable to rewind rpc post data - try increasing http.postBuffer RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10053 原因是Git默认限制推送的大小，运行命令更改限制大小即可 1git config --global http.postBuffer 524288000]]></content>
+      <categories>
+        <category>技术</category>
+        <category>其他</category>
+        <category>问题解决</category>
+      </categories>
+      <tags>
+        <tag>问题解决</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Cmder win10下报错 Can't register shortcut]]></title>
+    <url>%2F2017%2F12%2F06%2Fwin10%E4%B8%8B-Can-t-register-shortcut%2F</url>
+    <content type="text"><![CDATA[搬运自-Github：Can’t register shortcut 冲突的原因是无法设置 Ctrl + ` 热键 Win + Alt + P 打开设置,在 Keys &amp; Macro 树状菜单下Hotkey一栏下找到 Ctrl + `Description为Minimize/Restore(Quake-style hotkey also)，选中后在下方Choose hotkey中增加alt键位,点击右下角 Save settings 即可]]></content>
+      <categories>
+        <category>技术</category>
+        <category>windows</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>Cmder</tag>
+        <tag>软件</tag>
+        <tag>问题解决</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于报错 transformClassesWithProfilers-transformFor]]></title>
+    <url>%2F2017%2F11%2F15%2F%E5%85%B3%E4%BA%8EtransformClassesWithProfilers-transformFor%2F</url>
+    <content type="text"><![CDATA[升级AndroidStudio3.0后,运行项目报错1Error:Execution failed for task &apos;:ygj_new:transformClassesWithProfilers-transformFor_360Debug&apos;. &gt; 3 在Edit configuration中关闭advanced profiling即可]]></content>
+      <tags>
+        <tag>技术</tag>
+        <tag>android</tag>
+        <tag>android studio</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于小米5s刷 Resurrection Remix OS 部分应用没有声音 & 刷机步骤]]></title>
+    <url>%2F2017%2F11%2F11%2F%E5%B0%8F%E7%B1%B35s%E5%88%B7Resurrection-Remix-OS%2F</url>
+    <content type="text"><![CDATA[问题解决刷成功后使用了半天,功能基本正常之后发现微信/网易云音乐等应用没有声音,但是铃声/通知/游戏等应用是有声音的,在XDA论坛的一篇博文上找到了解决的方法,需要刷一个补丁包补丁包页面:capricornCNFirmware点击download下的zip链接 下载后重启进入Recovery,选择sdcard中的zip包刷入即可 这里附上刷机的步骤 解锁BootLoader进入小米解锁网站 申请解锁小米手机填写资料申请,通过后下载解锁软件,根据软件提示解锁手机[教程] 小米手机5s 解锁（线刷必需）与上锁 详细小白教程 需要下载的文件卡刷需要第三方的Recovery下载页面 TWRP选择带有.img的链接 下载adbadb-Windowsadb-Mac 下载卡刷包Resurrection Remix OS选择列表中最新的一个即可 步骤解压缩下载的adb压缩包后,打开cmd命令行或Terminal终端,cd到解压缩后的目录 打开手机设置－关于手机－然后点击MIUI版本号7次，就打开的“开发者模式”，然后再返回“设置”，点击更多“设置” 就能找到“开发者选项”,进入后打开usb调试选项 之后连接手机到电脑,如手机出现权限弹框点击同意,之后命令行下输入adb devices,多试几次,出现如下样式表示连接成功命令行输入adb reboot bootloader然后回车,手机重启进入fastboot模式命令行fastboot devices,显示已连接的手机代号macOS 10.13 下此命令不可用 提示ERROR: Unable to create a plug-in (e00002be) 建议使用Windows平台命令行fastboot flash recovery 下载的TWRP文件名类似fastboot flash recovery twrp-x.x.x-x-capricorn.img 之后按住 音量上/加键+电源键,长按直到出现 MI logo后松手即进入 将下载的卡刷包传入手机命令行adb push filename.zip /sdcard/,filename.zip替换为卡刷包的文件名类似:adb push RR-N-v5.8.5-20171011-capricorn-Weekly.zip /sdcard/ 选择[清除]-[高级清除] ,勾选 [Cache] [System] [Data] 滑动确认 之后返回首页,选择[安装] 浏览目录选择下载的卡刷包 滑动输入即可,不要忘记刷入声音相关的补丁包]]></content>
+      <categories>
+        <category>安卓</category>
+        <category>rom</category>
+      </categories>
+      <tags>
+        <tag>安卓</tag>
+        <tag>rom</tag>
+        <tag>Resurrection Remix OS</tag>
+        <tag>小米5s</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[切换ViewPager,RecyclerView自动滑动问题]]></title>
+    <url>%2F2017%2F11%2F09%2FViewPager-Fragment-RecyclerView-%E5%BD%93%E5%88%87%E6%8D%A2viewpager%E6%97%B6-recyclerview%E8%87%AA%E5%8A%A8%E6%BB%91%E5%8A%A8%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[ViewPager+Fragment+RecyclerView,当切换ViewPager时,RecyclerView自动总是自动滑动这个问题应该是ViewPager在切换时RecyclerView获得了焦点RecyclerView的 focusableOnTouchMode属性默认是true，所以ViewPager切换时recyclerView自动获得焦点后就会发生滚动解决办法是将recyclerView的父控件设置android:focusableInTouchMode=&quot;true&quot;]]></content>
+      <categories>
+        <category>技术</category>
+        <category>android</category>
+        <category>问题解决</category>
+      </categories>
+      <tags>
+        <tag>fragment</tag>
+        <tag>viewpager</tag>
+        <tag>recyclerview</tag>
+        <tag>滑动</tag>
+        <tag>问题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于Android 7.1.2 网络图标上的感叹号]]></title>
+    <url>%2F2017%2F11%2F09%2F%E5%85%B3%E4%BA%8EAndroid-7-1-2-%E7%BD%91%E7%BB%9C%E5%9B%BE%E6%A0%87%E4%B8%8A%E7%9A%84%E6%84%9F%E5%8F%B9%E5%8F%B7%2F</url>
+    <content type="text"><![CDATA[搬运自-狐狸的小小窝:关于 ANDROID 5.0-7.1.2 网络图标上的感叹号及其解决办法 命令行下执行adb命令1adb shell &quot;settings put global captive_portal_https_url https://www.noisyfox.cn/generate_204&quot; 恢复可用: 1adb shell &quot;settings delete global captive_portal_https_url&quot;]]></content>
+      <categories>
+        <category>安卓</category>
+      </categories>
+      <tags>
+        <tag>安卓</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[kotlin click事件 intent跳转 fragment获取控件]]></title>
+    <url>%2F2017%2F11%2F06%2Fkotlin-click%E4%BA%8B%E4%BB%B6-intent%E8%B7%B3%E8%BD%AC-fragment%E8%8E%B7%E5%8F%96%E6%8E%A7%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[搬运自CSDN: kotlin click事件 intent跳转 fragment获取控件 click事件 intent跳转 传递参数1234mFloatBtn.onClick &#123; val intent = Intent(this@MainContentActivity,MainActivity::class.java) startActivity(intent)&#125; 只跳转，无参数传递1mFloatBtn.onClick &#123; startActivity&lt;MainActivity&gt;() &#125; 跳转，传参12345mFloatBtn.onClick &#123; startActivity&lt;MainActivity&gt;( "name" to "MainContent" // key to value )&#125; fragment获取控件kotlin 在activity中，支持无需findviewbyid，控件直接可使用但 fragment中，不支持，只好 find控件 1234567891011121314private var mTxt: TextView? = nulloverride fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? &#123; val view = inflater!!.inflate(R.layout.frag_textview_content, null) initView(view) setUpViews() return view&#125;private fun initView(view: View) &#123; mTxt = view.find(R.id.mTxt)&#125;]]></content>
+      <categories>
+        <category>技术</category>
+        <category>android</category>
+        <category>kotlin</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>kotlin</tag>
+        <tag>intent</tag>
+        <tag>fragment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于mac下gradlew命令不能使用]]></title>
+    <url>%2F2017%2F10%2F30%2F%E5%85%B3%E4%BA%8Emac%E4%B8%8Bgradlew%E5%91%BD%E4%BB%A4%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[今天项目编译错误后需要看详细日志,发现gradlew命令提示找不到 1bash: gradlew: command not found Google了一下找到了解决的方法 macOS下使用gradlew命令需要再命令前加上./比如:./gradlew --info assembleDebug之后会提示权限: 1bash: ./gradlew: Permission denied 运行: 1chmod +x gradlew 之后就可以使用了]]></content>
+      <categories>
+        <category>技术</category>
+        <category>android</category>
+        <category>gradle</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>gradle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于Android Studio3.0升级]]></title>
+    <url>%2F2017%2F10%2F27%2F%E5%85%B3%E4%BA%8EAndroid-Studio3-0%2F</url>
+    <content type="text"><![CDATA[升级3.0之后打开项目报错，这里记录一下解决的过程首先更新了gradle版本 之后报错 1Gradle sync failed: Cannot set the value of read-only property &apos;outputFile&apos; for ApkVariantOutputImpl_Decorated&#123;apkData=Main&#123;type=MAIN, fullName=xiaomiDebug, filters=[]&#125;&#125; of type com.android.build.gradle.internal.api.ApkVariantOutputImpl. Google了一下，是因为项目Gradle下使用的部分代码语法变了这是项目中原本自定义构建APK的代码 12345678910111213141516171819applicationVariants.all &#123; variant -&gt; variant.outputs.each &#123; output -&gt; def newName def timeNow def outputFile = output.outputFile if (Boolean.valueOf(IS_JENKINS)) &#123; timeNow = JENKINS_TIME newName = APP_PACKAGE_NAME + "-android-V$&#123;defaultConfig.versionName&#125;-" + variant.productFlavors[0].name + "-" + timeNow + "-" + variant.buildType.name + '.apk' &#125; else &#123; timeNow = getDate() if ('debug' == variant.buildType.name) &#123; newName = APP_PACKAGE_NAME + "-android-V$&#123;defaultConfig.versionName&#125;-debug.apk" &#125; else &#123; newName = APP_PACKAGE_NAME + "-android-V$&#123;defaultConfig.versionName&#125;-" + variant.productFlavors[0].name + "-" + timeNow + "-" + variant.buildType.name + '.apk' &#125; &#125; output.outputFile = new File(outDirectory, newName) &#125; &#125; 其中的这句 variant.outputs.each { output -&gt;需要把each替换成all获取输出文件的代码output.outputFile已经变为只读,现在直接使用outputFileName赋值即可修改输出的名称 修改后的代码 123456789101112131415161718applicationVariants.all &#123; variant -&gt; variant.outputs.all &#123; output -&gt; def newName def timeNow if (Boolean.valueOf(IS_JENKINS)) &#123; timeNow = JENKINS_TIME newName = APP_PACKAGE_NAME + "-android-V$&#123;defaultConfig.versionName&#125;-" + variant.productFlavors[0].name + "-" + timeNow + "-" + variant.buildType.name + '.apk' &#125; else &#123; timeNow = getDate() if ('debug' == variant.buildType.name) &#123; newName = APP_PACKAGE_NAME + "-android-V$&#123;defaultConfig.versionName&#125;-debug.apk" &#125; else &#123; newName = APP_PACKAGE_NAME + "-android-V$&#123;defaultConfig.versionName&#125;-" + variant.productFlavors[0].name + "-" + timeNow + "-" + variant.buildType.name + '.apk' &#125; &#125; outputFileName = newName &#125; &#125; 修改后 Try Again 继续报错 12345678910111213141516Gradle sync failed: Cannot choose between the following configurations of project :androidSDK: - debugApiElements - debugRuntimeElements - releaseApiElements - releaseRuntimeElements All of them match the consumer attributes: - Configuration &apos;debugApiElements&apos;: - Found com.android.build.api.attributes.BuildTypeAttr &apos;debug&apos; but wasn&apos;t required. - Found com.android.build.gradle.internal.dependency.AndroidTypeAttr &apos;Aar&apos; but wasn&apos;t required. - Found com.android.build.gradle.internal.dependency.VariantAttr &apos;debug&apos; but wasn&apos;t required. - Found org.gradle.api.attributes.Usage &apos;java-api&apos; but wasn&apos;t required. - Configuration &apos;debugRuntimeElements&apos;: - Found com.android.build.api.attributes.BuildTypeAttr &apos;debug&apos; but wasn&apos;t required. - Found com.android.build.gradle.internal.dependency.AndroidTypeAttr &apos;Aar&apos; but wasn&apos;t required. - Found com.android.build.gradle.internal.dependency.VariantAttr &apos;debug&apos; but wasn&apos;t required. - Found org.gradle... (show balloon) 看报错说明是因为依赖的一个model:androidSDK,Google说明新版中依赖项目的语法改变了,依赖包使用旧的语法没有报错,旧版compile project(&#39;:androidSDK&#39;)新版implementation project(&#39;:androidSDK&#39;)貌似现在依赖包也可以使用implementation 这里还提示一点,gradle文件中: compile 替换为 implementation apt 替换为 annotationProcessor testCompile 替换为 androidTestImplementationreleaseCompile 替换为 releaseImplementation 这里注意一点:compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])不需要替换compile,看样子只有依赖包的时候才需要替换还有一点,有的依赖包替换成implementation提示找不到,换回compile又可以了 继续Tran Again提示需要更新Android SDK Build Tools version 至 26.0.2之后报错 12Error:android-apt plugin is incompatible with the Android Gradle plugin. Please use &apos;annotationProcessor&apos; configuration instead.Error:All flavors must now belong to a named flavor dimension. Learn more at https://d.android.com/r/tools/flavorDimensions-missing-error-message.html 继续Google,新版去掉了android-apt,所以删除项目Gradle中apply plugin: &#39;android-apt&#39;,只保留apply plugin: &#39;com.android.application&#39;把apt替换为annotationProcessor Try Again: 1Error:All flavors must now belong to a named flavor dimension. Learn more at https://d.android.com/r/tools/flavorDimensions-missing-error-message.html 根据官网说法： 1you need to first declare one or more dimensions using the flavorDimensions property. After that, assign each flavor to one of the dimensions you declared 必须指定一个或多个 flavor dimensionsflavorDimensions 后面可以添加多个不同类型的参数例如：flavorDimensions &quot;tier&quot;, &quot;minApi&quot;官方示例: 1234567891011121314151617181920212223242526// Specifies two flavor dimensions.flavorDimensions "tier", "minApi"productFlavors &#123; free &#123; // Assigns this product flavor to the "tier" flavor dimension. Specifying // this property is optional if you are using only one dimension. dimension "tier" ... &#125; paid &#123; dimension "tier" ... &#125; minApi23 &#123; dimension "minApi" ... &#125; minApi18 &#123; dimension "minApi" ... &#125;&#125; 项目中原来的代码: 1234productFlavors &#123; _360 &#123;&#125; xiaomi &#123;&#125; &#125; 修改后的代码: 123456789flavorDimensions "default"productFlavors &#123; _360 &#123; dimension "default" &#125; xiaomi &#123; dimension "default" &#125;&#125; 继续Tran Again: 1234Error:found unexpected optical bounds (red pixel) on top border at x=102.Error:java.util.concurrent.ExecutionException: com.android.tools.aapt2.Aapt2Exception: AAPT2 error: check logs for detailsError:Execution failed for task &apos;:ygj_new:merge_360DebugResources&apos;.&gt; Error: java.util.concurrent.ExecutionException: com.android.tools.aapt2.Aapt2Exception: AAPT2 error: check logs for details 是因为项目.9图片中含有红色边线,删除即可 继续Try Again: 1234FAILURE: Build failed with an exception.* What went wrong:Task &apos;compileDebug&apos; is ambiguous in root project &apos;eachonline_upgrade&apos;. Candidates are: &apos;compileDebugAidl&apos;, &apos;compileDebugAndroidTestAidl&apos;, &apos;compileDebugAndroidTestJavaWithJavac&apos;, &apos;compileDebugAndroidTestKotlin&apos;, &apos;compileDebugAndroidTestNdk&apos;, &apos;compileDebugAndroidTestRenderscript&apos;, &apos;compileDebugAndroidTestShaders&apos;, &apos;compileDebugAndroidTestSources&apos;, &apos;compileDebugJavaWithJavac&apos;, &apos;compileDebugKotlin&apos;, &apos;compileDebugNdk&apos;, &apos;compileDebugRenderscript&apos;, &apos;compileDebugShaders&apos;, &apos;compileDebugSources&apos;, &apos;compileDebugUnitTestJavaWithJavac&apos;, &apos;compileDebugUnitTestKotlin&apos;, &apos;compileDebugUnitTestSources&apos;. 继续Tran Again: 12Error:Execution failed for task &apos;:ygj_new:transformClassesWithAndroidGradleClassShrinkerFor_360Debug&apos;.&gt; java.lang.ArrayIndexOutOfBoundsException (no error message) 对于这个错误真是百思不得其解,研究了两天在一篇博文的启示下把Instant Run关掉,之后就成功了!这里附上这篇博文: 记录使用Instant Run的一个坑]]></content>
+      <categories>
+        <category>技术</category>
+        <category>android</category>
+        <category>android studio</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>android</tag>
+        <tag>android studio</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo新环境部署]]></title>
+    <url>%2F2017%2F10%2F20%2FHexo%E6%96%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%2F</url>
+    <content type="text"><![CDATA[起因一开始是想把整个博客的文件备份下来,所以想到了Github把整个博客上传到了Github才想起来Github私有项目是属于付费的,所以看了另一个平时常用的git服务:oschina上面可以直接导入Github的项目,clone下来之后试了一下hexo clean,很显然hexo的环境需要重新部署,但是hexo init需要非空的目录,所以Google了一下,在知乎上找到了一篇文章 部署git clone 下来之后,在博客文件夹下依次执行命令:npm install hexo 或者 npm install -g hexo-clinpm installnpm install hexo-deployer-git记得不需要hexo init这条指令 之后就可以正常使用了,重新上传试试~hexo clean 正常hexo g 也正常hexo d 提交成功 CrazyMilk使用hexo，如果换了电脑怎么更新博客？]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[开篇!]]></title>
+    <url>%2F2017%2F10%2F20%2F%E5%BC%80%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[作为本博客开通的第一篇文章,留作纪念😄!花了两天时间来回配置好几遍,终于完成了,之前总是遗憾没能把一些经验分享出来]]></content>
+      <categories>
+        <category>随想</category>
+      </categories>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+</search>
