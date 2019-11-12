@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[空指针 println needs a message]]></title>
+    <url>%2F2019%2F08%2F12%2F%E7%A9%BA%E6%8C%87%E9%92%88-println-needs-a-message%2F</url>
+    <content type="text"><![CDATA[空指针异常: 12345678java.lang.NullPointerException: println needs a message at android.util.Log.println_native(Native Method) at android.util.Log.e(Log.java:232) at com.lphtsccft.zhangle.foundation.utility.t.a(SourceFile:227) at com.lphtsccft.zhangle.foundation.utility.t.c(SourceFile:462) at com.lphtsccft.zhangle.foundation.utility.t.b(SourceFile:409) at com.lphtsccft.zhangle.foundation.utility.t.a(SourceFile:26) at com.lphtsccft.zhangle.foundation.utility.t$a.onServiceConnected(SourceFile:345) 注意打印Log时,不能使用如下方式,message有可能为 null 1234try &#123;&#125; catch (Exception e) &#123; Log.e(TAG, e.getMessage());&#125;]]></content>
+      <categories>
+        <category>技术</category>
+        <category>android</category>
+        <category>问题解决</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>问题解决</tag>
+        <tag>Log</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Android 6.0 适配]]></title>
+    <url>%2F2019%2F08%2F08%2FAndroid-6-0-%E9%80%82%E9%85%8D%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>技术</category>
+        <category>android</category>
+        <category>android版本适配</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>技术</tag>
+        <tag>版本适配</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[repo init 错误 has not been signed]]></title>
     <url>%2F2019%2F08%2F07%2Frepo-init-%E9%94%99%E8%AF%AF-has-not-been-signed%2F</url>
     <content type="text"><![CDATA[repo init 初始化时报错 123456 Resolving deltas: 100% (39/39), done. From aosp.tuna.tsinghua.edu.cn/platform/manifest * [new branch] stable -&gt; origin/stable * [new branch] windows -&gt; origin/windowsfatal: branch &apos;stable&apos; has not been signed 解决方法repo init 命令最后 加上--no-repo-verify选项，再次执行 1repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b master --no-repo-verify]]></content>
@@ -25,10 +55,10 @@
         <category>问题解决</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>android</tag>
-        <tag>android studio</tag>
         <tag>gradle</tag>
+        <tag>技术</tag>
+        <tag>android studio</tag>
       </tags>
   </entry>
   <entry>
@@ -41,8 +71,8 @@
         <category>问题解决</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>android</tag>
+        <tag>技术</tag>
         <tag>databinding</tag>
       </tags>
   </entry>
@@ -97,8 +127,8 @@
     <url>%2F2017%2F11%2F15%2F%E5%85%B3%E4%BA%8EtransformClassesWithProfilers-transformFor%2F</url>
     <content type="text"><![CDATA[升级AndroidStudio3.0后,运行项目报错1Error:Execution failed for task &apos;:ygj_new:transformClassesWithProfilers-transformFor_360Debug&apos;. &gt; 3 在Edit configuration中关闭advanced profiling即可]]></content>
       <tags>
-        <tag>技术</tag>
         <tag>android</tag>
+        <tag>技术</tag>
         <tag>android studio</tag>
       </tags>
   </entry>
@@ -185,8 +215,8 @@
         <category>android studio</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>android</tag>
+        <tag>技术</tag>
         <tag>android studio</tag>
       </tags>
   </entry>
