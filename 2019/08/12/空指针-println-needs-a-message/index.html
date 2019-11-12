@@ -59,7 +59,7 @@
 <meta property="og:site_name" content="Brady&#39;s Notes">
 <meta property="og:description" content="空指针异常: 12345678java.lang.NullPointerException: println needs a message	at android.util.Log.println_native(Native Method)	at android.util.Log.e(Log.java:232)	at com.lphtsccft.zhangle.foundation.utility">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-12T06:03:54.293Z">
+<meta property="og:updated_time" content="2019-11-12T05:28:54.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="空指针 println needs a message">
 <meta name="twitter:description" content="空指针异常: 12345678java.lang.NullPointerException: println needs a message	at android.util.Log.println_native(Native Method)	at android.util.Log.e(Log.java:232)	at com.lphtsccft.zhangle.foundation.utility">
@@ -249,10 +249,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-08-12 13:56:42 / 修改时间：14:03:54" itemprop="dateCreated datePublished" datetime="2019-08-12T13:56:42+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 13:56:42" itemprop="dateCreated datePublished" datetime="2019-08-12T13:56:42+08:00">2019-08-12</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-12 13:28:54" itemprop="dateModified" datetime="2019-11-12T13:28:54+08:00">2019-11-12</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -301,7 +307,7 @@
 <p>注意打印Log时,不能使用如下方式,message有可能为 null</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">    Log.e(TAG, e.getMessage());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
+<a id="more"></a>
     </div>
 
     
