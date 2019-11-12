@@ -56,9 +56,9 @@
       </categories>
       <tags>
         <tag>android</tag>
-        <tag>gradle</tag>
         <tag>技术</tag>
         <tag>android studio</tag>
+        <tag>gradle</tag>
       </tags>
   </entry>
   <entry>
@@ -185,8 +185,8 @@
         <category>kotlin</category>
       </categories>
       <tags>
-        <tag>android</tag>
         <tag>kotlin</tag>
+        <tag>android</tag>
         <tag>intent</tag>
         <tag>fragment</tag>
       </tags>
