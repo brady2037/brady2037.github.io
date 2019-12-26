@@ -25,8 +25,8 @@
         <category>android版本适配</category>
       </categories>
       <tags>
-        <tag>android</tag>
         <tag>技术</tag>
+        <tag>android</tag>
         <tag>版本适配</tag>
       </tags>
   </entry>
@@ -48,17 +48,17 @@
   <entry>
     <title><![CDATA[解决 maven google 用不了]]></title>
     <url>%2F2019%2F07%2F30%2F%E8%A7%A3%E5%86%B3-maven-google-%E7%94%A8%E4%B8%8D%E4%BA%86%2F</url>
-    <content type="text"><![CDATA[国内好像不能访问https://maven.google.com，导致Android Studio一直在编译. 解决方法把maven { url ‘https://maven.google.com’ }替换成下面的就可以了 123456allprojects &#123; repositories &#123; jcenter() maven &#123; url &apos;https://dl.google.com/dl/android/maven2/&apos; &#125; &#125;&#125;]]></content>
+    <content type="text"><![CDATA[国内使用Google的https://maven.google.comMaven仓库时常抽风，导致Android Studio一直在编译. 解决方法把maven { url ‘https://maven.google.com’ }替换成下面的就可以了 123456allprojects &#123; repositories &#123; jcenter() maven &#123; url &apos;https://dl.google.com/dl/android/maven2/&apos; &#125; &#125;&#125;]]></content>
       <categories>
         <category>技术</category>
         <category>android</category>
         <category>问题解决</category>
       </categories>
       <tags>
-        <tag>android</tag>
-        <tag>gradle</tag>
         <tag>技术</tag>
+        <tag>android</tag>
         <tag>android studio</tag>
+        <tag>gradle</tag>
       </tags>
   </entry>
   <entry>
@@ -71,8 +71,8 @@
         <category>问题解决</category>
       </categories>
       <tags>
-        <tag>android</tag>
         <tag>技术</tag>
+        <tag>android</tag>
         <tag>databinding</tag>
       </tags>
   </entry>
@@ -127,8 +127,8 @@
     <url>%2F2017%2F11%2F15%2F%E5%85%B3%E4%BA%8EtransformClassesWithProfilers-transformFor%2F</url>
     <content type="text"><![CDATA[升级AndroidStudio3.0后,运行项目报错1Error:Execution failed for task &apos;:ygj_new:transformClassesWithProfilers-transformFor_360Debug&apos;. &gt; 3 在Edit configuration中关闭advanced profiling即可]]></content>
       <tags>
-        <tag>android</tag>
         <tag>技术</tag>
+        <tag>android</tag>
         <tag>android studio</tag>
       </tags>
   </entry>
@@ -157,8 +157,8 @@
         <category>问题解决</category>
       </categories>
       <tags>
-        <tag>viewpager</tag>
         <tag>fragment</tag>
+        <tag>viewpager</tag>
         <tag>recyclerview</tag>
         <tag>滑动</tag>
         <tag>问题</tag>
@@ -186,9 +186,9 @@
       </categories>
       <tags>
         <tag>android</tag>
-        <tag>fragment</tag>
         <tag>kotlin</tag>
         <tag>intent</tag>
+        <tag>fragment</tag>
       </tags>
   </entry>
   <entry>
@@ -215,8 +215,8 @@
         <category>android studio</category>
       </categories>
       <tags>
-        <tag>android</tag>
         <tag>技术</tag>
+        <tag>android</tag>
         <tag>android studio</tag>
       </tags>
   </entry>

@@ -548,7 +548,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-12 13:29:22" itemprop="dateModified" datetime="2019-11-12T13:29:22+08:00">2019-11-12</time>
+                <time title="修改时间：2019-12-26 10:37:06" itemprop="dateModified" datetime="2019-12-26T10:37:06+08:00">2019-12-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -592,7 +592,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>国内好像不能访问<code>https://maven.google.com</code>，导致Android Studio一直在编译. </p>
+          <p>国内使用Google的<code>https://maven.google.com</code>Maven仓库时常抽风，导致Android Studio一直在编译. </p>
 <h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>把maven { url ‘<a href="https://maven.google.com’" target="_blank" rel="noopener">https://maven.google.com’</a> }替换成下面的就可以了</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        jcenter()</span><br><span class="line">        maven &#123; url &apos;https://dl.google.com/dl/android/maven2/&apos; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
