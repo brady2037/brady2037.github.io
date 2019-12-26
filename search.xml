@@ -157,8 +157,8 @@
         <category>问题解决</category>
       </categories>
       <tags>
-        <tag>fragment</tag>
         <tag>viewpager</tag>
+        <tag>fragment</tag>
         <tag>recyclerview</tag>
         <tag>滑动</tag>
         <tag>问题</tag>
@@ -186,9 +186,9 @@
       </categories>
       <tags>
         <tag>android</tag>
+        <tag>fragment</tag>
         <tag>kotlin</tag>
         <tag>intent</tag>
-        <tag>fragment</tag>
       </tags>
   </entry>
   <entry>
